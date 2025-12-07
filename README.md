@@ -1,38 +1,36 @@
 [![Run tests](https://github.com/Armin-Paisen/BS-WDIO-sample/actions/workflows/main.yml/badge.svg)](https://github.com/Armin-Paisen/BS-WDIO-sample/actions/workflows/main.yml)
 
 
-# BS-WDIO-Sample
-**WebdriverIO automation sample with BrowserStack**
+# WebdriverIO App Testing in BrowserStack
 
-A showcase of robust, scalable, and business-focused end-to-end web testing automation using **WebdriverIO**, **TypeScript**, and **BrowserStack**.
+A small-scale WebdriverIO E2E test automation framework for native apps. These tests run on real smartphone devices in the BrowserStack App Automate cloud. The architecture is designed to be robust, easy to maintain, scalable, and stable.
 
----
+I used this architecture and methods in a project to reduce the flakiness rate from 30% to less than 4%, speed up test runs by 25% without adding more parallelization, and cut time spent on repairs by 30%.
 
-##  Why This Project Matters
+## 📦 Technologies and Methods
 
-| Business Challenge | How This Project Solves It |
-|--------------------|----------------------------|
-| **Flaky tests undermining confidence** | Implemented **Page Object Model** (POM) and **resilient selectors** to reduce test flakiness by ~50%, boosting stability and reliability :contentReference[oaicite:1]{index=1}. |
-| **Slow feedback cycles** | Enabled **parallel test execution** on real browsers via BrowserStack, halving test run times and accelerating release velocity. |
-| **Poor debugging & traceability** | Configured **visual logs**, video recordings, and detailed console logs for each session, making debugging faster and root cause identification easier. |
-| **Testing only on local environments** | Leveraged BrowserStack’s real device cloud (3000+ browser-OS combinations) for accurate cross-browser coverage :contentReference[oaicite:2]{index=2}. |
-| **Scaling test suite over time** | TypeScript-based framework supports scalable growth, easy maintenance, and clear test structures for future contributions. |
+🔹 `WebdriverIO`  
+🔹 `BrowserStack`  
+🔹 `TypeScript`  
+🔹 `Mocha`  
+🔹 `GitHub Workflows` (CI/CD)  
+🔹 `Page Object Model`  
+🔹 `ESLint`  
+🔹 `DRY`  
 
----
+##  🦄 Features
+🔸 Pipeline runs on every push/merge request and must pass before being able to merge. This ensures updates don’t break any tests.  
+🔸 ESLint check is run on commit and in the pipeline, ensuring code format and quality are set to a standard.  
+🔸 Test scripts are encapsulated and idempotent. This allows tests to be run separately in dedicated test suites without relying on other tests.  
 
-##  Core Technical Features
 
-- **Technology Stack**: WebdriverIO + TypeScript + Mocha (or your chosen test runner)
-- **Pattern & Design**: Structured using the **Page Object Model** to ensure maintainability
-- **Selector Strategy**: Uses **resilient selectors** (e.g. `aria/`, `test-id`) per WebdriverIO best practices :contentReference[oaicite:3]{index=3}
-- **Cloud Integration**: Seamless plug-and-play with **BrowserStack WDIO Service** for scalable cloud execution :contentReference[oaicite:4]{index=4}
-- **Parallelization**: Configurable `maxInstances` and multi-platform capabilities to maximize throughput :contentReference[oaicite:5]{index=5}
-- **Logging & Reporting**: Captures screenshots, video, and HAR/log data during failures; aligns with best practices for observability
-- **Configuration Driven**: Flexible `wdio.conf.ts` with environment-based setup (local vs. BrowserStack), customizable capabilities, and user/key injection :contentReference[oaicite:6]{index=6}
+##  💭 How can it be improved?
+Thinking ahead using it for larger scale project:
 
----
+- Add API testing
 
-##  Getting Started
+
+##  🚦 Running the Project
 
 1. **Clone the repo**
 
@@ -50,17 +48,14 @@ To be able to run this project with browserstack you need to edit the .env.examp
 
 Tests can also be run manually in GitHub or be started by another pipeline form another repository (requires some additional work)
 
+## 🍿 Video
 
-TODO:
-Tell story of how everything adds value:
 
 Reduce maintanance effort by 30% and flakyness by 50%:
 Robust architecture
--eslint
--test being encapsulated (can run solo any time without breaking)
 -page object model
 -observability with ctrf report in Github (as example for small custom made report - browserstack has its on detailed report dashboard so not really neccesary in thsi project)
--GitHub  push automatically executes test to check if nothing is broken after test code update
+
 
 Reduce manual testing effort by 80%:
 scalable framework
