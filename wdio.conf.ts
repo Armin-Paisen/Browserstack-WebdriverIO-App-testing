@@ -99,7 +99,7 @@ export const config: WebdriverIO.Config = {
         idleTimeout: 180,
       },
     },
-
+/*
     {
       // capabilities
       platformName: "Android",
@@ -115,7 +115,7 @@ export const config: WebdriverIO.Config = {
         buildName: `Test run WDIO-APP`,
         idleTimeout: 180,
       },
-    },
+    },*/
   ],
 
   //
