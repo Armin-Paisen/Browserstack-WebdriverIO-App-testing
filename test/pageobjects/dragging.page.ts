@@ -99,7 +99,6 @@ class HomePage extends Page {
     await this.navDrag.click();
     await expect(this.screen).toBeDisplayed();
   }
-
 }
 
 export default new HomePage();

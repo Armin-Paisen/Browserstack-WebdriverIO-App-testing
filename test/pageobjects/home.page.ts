@@ -12,7 +12,6 @@ class HomePage extends Page {
   public get navForms() {
     return $("~Forms");
   }
-
 }
 
 export default new HomePage();
