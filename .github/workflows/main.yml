@@ -3,8 +3,9 @@ name: Run tests
 on:
   push: {}
   pull_request:
-    branches:
-      - main
+  branches:
+    - main
+  types: [opened, reopened]
   workflow_dispatch:
     inputs:
       testSuite:
