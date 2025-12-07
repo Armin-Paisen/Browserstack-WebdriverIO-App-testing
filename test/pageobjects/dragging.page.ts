@@ -1,6 +1,6 @@
 import Page from "./page";
 
-// sub page containing specific selectors and methods for a specific page
+// sub page containing specific selectors and methods for drag and drop page
 
 class HomePage extends Page {
   // define selectors using getter methods
@@ -94,14 +94,11 @@ class HomePage extends Page {
   }
 
   // a method to encapsule automation code to interact with the page
-  // e.g. to login using username and password
 
-  public async navigateLogin() {
+  public async navigateDragAndDrop() {
     await this.navDrag.click();
     await expect(this.screen).toBeDisplayed();
   }
-
-  // overwrite specific options to adapt it to page object
 }
 
 export default new HomePage();

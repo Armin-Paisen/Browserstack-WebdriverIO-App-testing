@@ -86,7 +86,7 @@ export const config: WebdriverIO.Config = {
     {
       // capabilities
       platformName: "Android",
-      "appium:app": "bs://54cd34741886bdb157cd96964cc9348cbd84db4c",
+      "appium:app": "bs://ad373fa0173ef2b43b9e947d1df28cebf78c91ab",
       "appium:deviceName": "Samsung Galaxy S23 Ultra",
       "appium:autoGrantPermissions": true,
       "appium:automationName": "UiAutomator2",

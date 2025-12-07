@@ -1,6 +1,6 @@
 import Page from "./page";
 
-// sub page containing specific selectors and methods for a specific page
+// sub page containing specific selectors and methods for login page
 
 class LoginPage extends Page {
   // define selectors using getter methods
