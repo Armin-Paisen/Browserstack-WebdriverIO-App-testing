@@ -2,7 +2,7 @@ import DraggingPage from "../pageobjects/dragging.page";
 
 describe("Drags and drops items into correct place", () => {
   it("Drag and drops items + check success popup", async () => {
-    await DraggingPage.navigateLogin();
+    await DraggingPage.navigateDragAndDrop();
     await expect(DraggingPage.screen).toBeDisplayed();
     await DraggingPage.item_l1.dragAndDrop(await DraggingPage.target_l1);
     await DraggingPage.item_l2.dragAndDrop(await DraggingPage.target_l2);

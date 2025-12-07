@@ -1,6 +1,6 @@
 import Page from "./page";
 
-// sub page containing specific selectors and methods for a specific page
+// sub page containing specific selectors and methods for homepage
 
 class HomePage extends Page {
   // define selectors using getter methods
@@ -13,10 +13,6 @@ class HomePage extends Page {
     return $("~Forms");
   }
 
-  // a method to encapsule automation code to interact with the page
-  // e.g. to login using username and password
-
-  // overwrite specific options to adapt it to page object
 }
 
 export default new HomePage();
