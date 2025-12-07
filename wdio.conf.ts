@@ -99,7 +99,7 @@ export const config: WebdriverIO.Config = {
         idleTimeout: 180,
       },
     },
-/*
+    /*
     {
       // capabilities
       platformName: "Android",
