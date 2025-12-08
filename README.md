@@ -31,19 +31,19 @@ I used this architecture and methods in a project to reduce the flakiness rate f
 🔸 Test scripts are encapsulated and idempotent. This allows tests to be run separately in dedicated test suites without relying on other tests.  
 🔸 Environment-driven configuration via a `.env` file for BrowserStack credentials and test settings.  
 🔸 Prepared for suite splitting (e.g., smoke/regression) and scalable execution patterns.  
-🔸 Cross-device and parallel test-run ready.  
-🔸 Supports scheduled nightly test runs.  
+🔸 Cross-device and parallel test-runs.   
 🔸 Includes a lightweight CTRF report integrated into GitHub.  
 
 ##  💭 How can it be improved?
 For a larger-scale project:
 
 🔹 Add API and performance testing to complement E2E coverage and speed up feedback.  
-🔹 Add Mocha test tags for targeted execution like `@smoke`, `@regression`, `@critical`, and platform and feature tags.  
-🔹 Also tag unstable tests with `@flaky` and group them into an allowed-to-fail suite, so they are tracked without blocking merges.  
+🔹 Add Mocha test tags for targeted execution like `@smoke`, `@regression`, `@critical`, well as platform and feature tags.  
+🔹 Tag unstable tests with `@flaky` and group them into a non-blocking (allowed-to-fail) suite, so they’re tracked without blocking merges.  
 🔹 Split and standardize configs by environment, platform, and suite to avoid a single oversized config file.  
+🔹 Set up a scheduled nightly regression run.  
 🔹 Expand test data management with fixtures and data builders/factories to keep tests clean and scalable.  
-🔹 Introduce a clear folder structure for reuse and maintainability for `fixtures/`, `helpers/`, `utils/`, `services/` for example:
+🔹 Introduce a clear folder structure to improve reuse and maintainability, for example:  
 
 ```
 test/
@@ -58,35 +58,40 @@ test/
 
 ##  🚦 Running the Project
 
-### Local:
+You need a BrowserStack account to run this project (a free trial version is available).
+
+### Local
+
 1. Clone the repository to your local machine.  
 2. Run `npm install` in the project directory to install the required dependencies.  
-3. Edit the `.env.example` ->  change file name and add Browserstack credentials (Further explanation inside the .env.example comments)  
-4. Run `npm run wdio` to start tests.  
+3. Rename `.env.example` to `.env` and add your BrowserStack key and username (further explanation is included in the `.env.example` comments).  
+4. Download the Android `.apk` file from here: https://github.com/webdriverio/native-demo-app/releases (v1.0.8)  
+5. Upload the `.apk` file to BrowserStack, then copy the uploaded app URL. It will look like this: `bs://ad373fa0173ef2b43b9e947d1df28cebf78c91ab`  
+6. In `wdio.conf.ts`, add that link to the capabilities under `"appium:app"`.  
+7. Run `npm run wdio` to start the tests.  
 
-### Via GitHub:
-1. Go to Actions → Run tests → Run workflow.  
-2. Optionally provide an input like "smoke" to just run a subset of tests
+### Via GitHub
+
+1. In GitHub Secrets, add: `BROWSERSTACK_ACCESS_KEY` and `BROWSERSTACK_USERNAME` using your BrowserStack key and username values.  
+3. In GitHub go to Actions → Run tests → Run workflow.  
+4. Optionally provide an input like "smoke" to run only a subset of tests  
 
 
 
 ## 🍿 Video
-
-
-Reduce maintanance effort by 30% and flakyness by 50%:
-Robust architecture
--page object model
--observability with ctrf report in Github (as example for small custom made report - browserstack has its on detailed report dashboard so not really neccesary in thsi project)
-
-
-Reduce manual testing effort by 80%:
-scalable framework
--cross device testing
--parallel testing
--CI/CD pipeline
--suit split smoke/regression
-
+This video demonstrates the login tests and verifies:  
+  
+🔸 Errors for empty inputs  
+🔸 Errors for incorrect credentials  
+🔸 Only the email error when the email is invalid but the password is valid  
+🔸 A success message for valid credentials, and that it can be closed  
+  
+You can find the details of the test script in: `/test/specs/login.ts`  
+  
+[![Watch the video](https://img.youtube.com/vi/CS1sAma_54A/maxresdefault.jpg)](https://youtube.com/shorts/CS1sAma_54A)  
+  
 
 ## 🙌 Credits
-This project uses the WebdriverIO example app for demonstration purposes. The app and related assets are owned by their respective authors and are subject to their original license.
-All other Third-party tools and libraries are also subject to their respective licenses.
+This project uses the WebdriverIO Native Demo App (https://github.com/webdriverio/native-demo-app) for demonstration purposes.  
+The app and related assets are owned by their respective authors and are provided under the terms of their original license.  
+All other third-party tools and libraries are provided under their respective licenses.
