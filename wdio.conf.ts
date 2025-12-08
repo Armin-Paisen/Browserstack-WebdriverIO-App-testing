@@ -45,9 +45,9 @@ export const config: WebdriverIO.Config = {
   // of the configuration file being run.
   specs: ["./test/specs/**/*.ts"],
   suites: {
-    smoke: ["./test/specs/loginLogout.ts"],
+    smoke: ["./test/specs/login.ts"],
     regression: [
-      "./test/specs/loginLogout.ts",
+      "./test/specs/login.ts",
       "./test/specs/dragNDrop.ts",
       // add more test file paths here
     ],
