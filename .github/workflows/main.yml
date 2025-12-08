@@ -19,7 +19,7 @@ on:
 
 jobs:
   lint:
-    name: Lint code
+    name: Lint code check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
