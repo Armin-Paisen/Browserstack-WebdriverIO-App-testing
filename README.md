@@ -88,7 +88,7 @@ This video demonstrates the login tests and verifies:
   
 You can find the details of the test script in: `/test/specs/login.ts`  
   
-[![Watch the video](https://img.youtube.com/vi/CS1sAma_54A/maxresdefault.jpg)](https://youtube.com/shorts/CS1sAma_54A)  
+https://github.com/user-attachments/assets/6ff83c4f-4c8d-48f4-b291-79bb4a066e60  
   
 
 ## 🙌 Credits
