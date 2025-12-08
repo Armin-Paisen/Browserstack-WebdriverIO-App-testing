@@ -10,7 +10,7 @@
 
 A small-scale WebdriverIO E2E test automation framework for native apps. These tests run on real smartphone devices in the BrowserStack App Automate cloud. The architecture is designed to be robust, easy to maintain, scalable, and stable.
 
-I used this architecture and methods in a project to reduce the flakiness rate from 30% to less than 4%, speed up test runs by 25% without adding more parallelization, and cut time spent on fixing by 30%.
+I used this architecture and methods in a previous project to reduce the flakiness rate from 30% to less than 4%, speed up test runs by 25% without adding more parallelization, and cut time spent on fixing by 30%.
 
 ## 📦 Technologies and Methods
 
