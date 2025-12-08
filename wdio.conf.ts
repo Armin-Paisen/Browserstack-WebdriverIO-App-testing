@@ -99,11 +99,11 @@ export const config: WebdriverIO.Config = {
         idleTimeout: 180,
       },
     },
-    /*
+
     {
       // capabilities
       platformName: "Android",
-      "appium:app": "bs://54cd34741886bdb157cd96964cc9348cbd84db4c",
+      "appium:app": "bs://ad373fa0173ef2b43b9e947d1df28cebf78c91ab",
       "appium:deviceName": "Google Pixel 5",
       "appium:autoGrantPermissions": true,
       "appium:automationName": "UiAutomator2",
@@ -115,7 +115,7 @@ export const config: WebdriverIO.Config = {
         buildName: `Test run WDIO-APP`,
         idleTimeout: 180,
       },
-    },*/
+    },
   ],
 
   //
